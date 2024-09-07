@@ -3,7 +3,7 @@
 import React, { ReactNode, FC } from "react";
 import { AiOutlineSortAscending } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
-import { TInitializeDay } from "@/types/DaysOfWeek.type";
+import TInitializeDay from "@/types/DaysOfWeek.type";
 import SelectBox from "./common/SelectBox.component";
 
 type TCalendarHeaderProps = {
@@ -23,7 +23,7 @@ const CalendarHeader: FC<TCalendarHeaderProps> = ({
 }): ReactNode => {
   return (
     <header id="calendar-header" className="flex">
-      <div className="min-w-48 min-h-32 p-2 border-t border-b border-r border-l border-slate-300">
+      <div className="min-w-48 max-w-48 min-h-32 p-2 border-t border-b border-r border-l border-slate-300">
         <div className="flex justify-end">
           <AiOutlineSortAscending className="text-neutral-500" size={24} />
         </div>
@@ -35,7 +35,7 @@ const CalendarHeader: FC<TCalendarHeaderProps> = ({
       {initializeDays.map((data: TInitializeDay) => (
         <div
           key={data.day}
-          className="min-w-32 min-h-32 p-2 border-t border-b border-r border-slate-300"
+          className="min-w-32 max-w-32 min-h-32 p-2 border-t border-b border-r border-slate-300"
         >
           <h5 className="font-light text-neutral-600">{data.name}</h5>
           <p className="text-4xl text-neutral-600">{data.day}</p>

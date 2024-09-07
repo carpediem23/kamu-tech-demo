@@ -40,7 +40,7 @@ const Navigation: FC = (): ReactNode => {
             key={index}
             href={`/${item.url}`}
             className={`transition-all duration-1000 flex flex-row items-center px-4 py-2 gap-2 text-base rounded-xl ${
-              active ? "text-white" : "text-neutral-600"
+              active ? "text-white font-bold" : "text-neutral-600"
             } ${active ? "bg-primary" : ""} ${collapsed ? "" : "min-w-48"}`}
           >
             {item.icon && (
