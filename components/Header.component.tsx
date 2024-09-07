@@ -24,7 +24,6 @@ const Header: FC = (): ReactNode => {
           height={100}
           priority={false}
           placeholder="blur"
-          loading="lazy"
         />
       </Link>
       <section id="app-header-tools" className="flex flex-row gap-4">
