@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, FC } from "react";
+import React, { ReactNode, FC, DragEvent, TouchEvent } from "react";
 import TInitializeDay from "@/types/DaysOfWeek.type";
 
 type TEventCellProps = {
@@ -9,7 +9,7 @@ type TEventCellProps = {
 };
 
 /**
- * Renders a cell for displaying events in a calendar.
+ * Renders a cell for displaying events with drag and touch support.
  *
  * @component
  * @param {TEventCellProps} props - The component props.
@@ -17,7 +17,10 @@ type TEventCellProps = {
  * @param {ReactNode} props.children - The content to be rendered inside the cell.
  * @returns {ReactNode} The rendered cell component.
  */
-const EventCell: FC<TEventCellProps> = ({ day, children }): ReactNode => {
+const EventCell: FC<TEventCellProps> = ({
+  day,
+  children,
+}): ReactNode => {
   return (
     <div
       id={`event-day-${day.day}`}

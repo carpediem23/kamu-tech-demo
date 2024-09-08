@@ -23,16 +23,19 @@ const CalendarEvents: FC<TCalendarEventsProps> = ({
   initializeDays = [],
   events = [],
 }): ReactNode => {
-  const [days, setDays] = useState<TInitializeDay[]>(initializeDays);
+  const [calendarEvents, setCalendarEvents] =
+    useState<TCalendarEvent[]>(events);
 
   return (
     <section id="calendar-events" className="flex">
       <div className="min-w-48 max-w-48 p-2 border-t border-b border-r border-l border-slate-300">
-        <p className="text-sm text-neutral-900">Events ({events.length})</p>
+        <p className="text-sm text-neutral-900">
+          Events ({calendarEvents.length})
+        </p>
       </div>
-      {days.map((day, index) => (
-        <EventCell key={index} day={day}>
-          {events.map(
+      {initializeDays.map((day, index) => (
+        <EventCell key={index} day={day} >
+          {calendarEvents.map(
             (event) =>
               day.day === event.day && (
                 <EventItem key={event.id} event={event} />
