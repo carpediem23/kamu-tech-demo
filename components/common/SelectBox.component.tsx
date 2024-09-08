@@ -23,7 +23,7 @@ const SelectBox: React.FC<TSelectBoxProps> = ({ title, arrowShow, icon }) => {
       <div className="flex flex-row items-center p-2 gap-2 border rounded">
         {icon && icon}
         <p className="text-sm text-neutral-900">{title}</p>
-        {arrowShow && <AiOutlineDown />}
+        {arrowShow && <AiOutlineDown size={10} />}
       </div>
     </div>
   );
