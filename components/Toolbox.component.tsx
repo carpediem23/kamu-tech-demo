@@ -15,7 +15,7 @@ const Toolbox: FC = (): ReactNode => {
   return (
     <section
       id="toolbox"
-      className="flex flex-row justify-between mb-8 p-4 gap-2 bg-neutral-100"
+      className="min-w-fit flex flex-row justify-between flex-wrap mb-8 p-4 gap-2 bg-neutral-100 overflow-x-auto"
     >
       <div className="flex flex-row gap-2">
         <Button title="Today" color="outline" />

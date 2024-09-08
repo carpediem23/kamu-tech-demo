@@ -20,7 +20,7 @@ const HeaderToolIcon: FC<THeaderToolIconProps> = ({
   notification,
 }): ReactNode => {
   return (
-    <div className="relative">
+    <div className="relative hover:cursor-pointer">
       {notification && (
         <div className="absolute top-0 right-1 bg-secondary-light w-2 h-2 rounded"></div>
       )}

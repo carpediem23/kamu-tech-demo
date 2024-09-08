@@ -9,6 +9,7 @@ import { AiOutlineSetting } from "react-icons/ai";
 import { TNavigationItem } from "@/types/Navigation.type";
 import TInitializeDay from "@/types/DaysOfWeek.type";
 import TCalendarEvent from "@/types/CalendarEvent.type";
+import TTTeamMemberTask from "@/types/TeamMemberTask.type";
 
 export const NAVIGATION_ITEMS: TNavigationItem[] = [
   { title: "Dashboard", icon: MdOutlineDashboard, url: "dashboard" },
@@ -32,5 +33,15 @@ export const DAYS_OF_WEEK: TInitializeDay[] = [
 ];
 
 export const EVENTS: TCalendarEvent[] = [
-  { id: 0, title: "Event title lorem ipsum", day: "03", color: "#A6F5FFFF" },
+  { id: 0, title: "Event title lorem ipsum 1", day: "03", color: "#A6F5FFFF" },
+];
+
+export const TEAM_MEMBER_TASKS: TTTeamMemberTask[] = [
+  {
+    id: 0,
+    title: "23:00-06:00/30",
+    subtitle: "Receptionist",
+    day: "03",
+    color: "#17A948FF",
+  },
 ];

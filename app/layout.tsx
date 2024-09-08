@@ -27,7 +27,7 @@ export default function RootLayout({
         <Header />
         <section className="flex flex-row">
           <Navigation />
-          <main className="flex min-h-screen flex-col items-center justify-between p-4 bg-white overflow-x-auto">
+          <main className="min-h-screen overflow-x-auto max-w-full p-4 bg-white">
             {children}
           </main>
         </section>
